@@ -53,7 +53,7 @@
                             @else
                                 <li>
                                     <ul class="list-unstyled">
-                                        <notificaciones :userid="'{{ auth()->user()->id }}'" :userrol="'{{ auth()->user()->roles[0]->nivelSeguridad }}'"></notificaciones>
+                                        <notificaciones :userid="'{{ auth()->user()->id }}'" :userrol="''"></notificaciones>
                                     </ul>
                                 </li>
                                 <li class="mr-3 ml-3 foto-usuario">

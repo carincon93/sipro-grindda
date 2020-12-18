@@ -24,11 +24,12 @@ class Rol extends Model
     protected $casts = [
        'permisos'               => 'array',
        'usuarioNotificacion'    => 'array',
-   ];
+       
+    ];
 
     public function usuarios()
     {
-        return $this->belongsToMany('App\Models\User', 'rol_usuario', 'rol_id', 'user_id');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function hasAccess(array $permisos) : bool
